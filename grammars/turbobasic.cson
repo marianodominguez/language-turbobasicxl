@@ -121,7 +121,7 @@
     'name': 'keyword.control.turbobasic'
   }
   { # END command
-    'match': '(?i)\\b(END)'
+    'match': '(?i)\\b(END)$'
     'name': 'keyword.control.turbobasic'
   }
   { # ENDIF command
@@ -240,8 +240,12 @@
     'match': '(?i)\\b(PRINT)'
     'name': 'keyword.control.turbobasic'
   }
-  { # PRINT command
+  { # PRINT with ? command
       'match': '(?i)\\b(\\?)'
+      'name': 'keyword.control.turbobasic'
+  }
+  { # PROC command
+      'match': '(?i)\\b(PROC)'
       'name': 'keyword.control.turbobasic'
   }
   { # POINT command
@@ -319,5 +323,13 @@
   { # USR function
     'match': '(?i)\\b(USR)\\b'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # WEND command
+    'match': '(?i)\\b(WEND)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # WHILE command
+    'match': '(?i)\\b(WHILE)'
+    'name': 'keyword.control.turbobasic'
   }
 ]
