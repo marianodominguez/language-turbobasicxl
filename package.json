@@ -1,6 +1,6 @@
 {
   "name": "language-turbobasicxl",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Atari TurboBasic XL 1.5 language support in Atom",
   "author": "Mariano Dominguez <mariano.dm@gmail.com>",
   "license": "ISC",
