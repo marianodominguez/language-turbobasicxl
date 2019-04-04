@@ -36,6 +36,18 @@
 #     '1':
 #       'name': 'entity.name.function.turbobasic'
 # }
+  { # Line label command
+    'match': '(?i)\\b(#)'
+    'name': 'variable.language.turbobasic'
+  }
+  { # %PUT command
+    'match': '(?i)\\b(%PUT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # %GET command
+    'match': '(?i)\\b(%GET)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # functions without arguments are invalid
     'match': '\\b([A-Z][a-z]+\\$?)\\s*\\(\\)'
     'name': 'invalid.illegal.turbobasic'
@@ -68,7 +80,14 @@
     'match': '(?i)\\b(BGET)'
     'name': 'keyword.control.turbobasic'
   }
-
+  { # BLOAD command
+    'match': '(?i)\\b(BLOAD)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # BRUN command
+    'match': '(?i)\\b(BLOAD)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # CHR$ function
     'match': '(?i)\\b(CHR(\\$|\\b))'
     'name': 'entity.name.function.turbobasic'
@@ -241,6 +260,10 @@
     'match': '(?i)\\b(INPUT)'
     'name': 'keyword.control.turbobasic'
   }
+  { # INSTR command
+    'match': '(?i)\\b(INSTR)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # INT function
     'match': '(?i)\\b(INT)\\b'
     'name': 'entity.name.function.turbobasic'
@@ -337,6 +360,10 @@
     'match': '(?i)\\b(POINT)'
     'name': 'keyword.control.turbobasic'
   }
+  { # PUT command
+    'match': '(?i)\\b(PUT)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # REPEAT command
     'match': '(?i)\\b(REPEAT)'
     'name': 'keyword.control.turbobasic'
@@ -428,6 +455,10 @@
   { # TRUNC function
     'match': '(?i)\\b(TRUNC)\\b'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # UINSTR command
+    'match': '(?i)\\b(UINSTR)'
+    'name': 'keyword.control.turbobasic'
   }
   { # TO command
     'match': '(?i)\\b(TO)'
