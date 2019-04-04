@@ -1,6 +1,6 @@
 {
   "name": "language-turbobasicxl",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Commodore 64 BASIC 2.0 language support in Atom",
   "author": "Mariano Dominguez <mariano.dm@gmail.com>",
   "license": "ISC",
