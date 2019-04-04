@@ -1,6 +1,6 @@
 'scopeName': 'source.turbobasic'
 'name': 'Turbo BASIC XL 1.5'
-'fileTypes': ['tba', 'tb']
+'fileTypes': ['tba', 'tb', 'tbl']
 'patterns': [
   { # lines that do not begin with a line number are marked invalid
     'match': '^\\D+'
@@ -27,7 +27,7 @@
     'name': 'meta.string.quoted.double.turbobasic'
   }
   { # operators
-    'match': ':|;|=|\\+|-|\\*|/|\\^|\\?|!|\\[|\\]|"|&|<|>|\\\\|@|_'
+    'match': ':|;|=|\\+|-|\\*|/|\\^|\\?|!|\\[|\\]|"|&|<|>|(?i)EXOR|\\\\|@|_'
     'name': 'keyword.operator.turbobasic'
   }
 # { # functions
@@ -60,12 +60,25 @@
     'match': '(?i)\\b(ATN)\\b'
     'name': 'entity.name.function.turbobasic'
   }
+  { # BPUT command
+    'match': '(?i)\\b(BPUT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # BGET command
+    'match': '(?i)\\b(BGET)'
+    'name': 'keyword.control.turbobasic'
+  }
+
   { # CHR$ function
     'match': '(?i)\\b(CHR(\\$|\\b))'
     'name': 'entity.name.function.turbobasic'
   }
   { # CLOAD command
     'match': '(?i)\\b(CLOAD)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # CIRCLE command
+    'match': '(?i)\\b(CIRCLE)'
     'name': 'keyword.control.turbobasic'
   }
   { # CLOG function
@@ -116,13 +129,41 @@
     'match': '(?i)\\b(DOS)'
     'name': 'keyword.control.turbobasic'
   }
+  { # DO command
+    'match': '(?i)\\b(DO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DEC function
+    'match': '(?i)\\b(DEC)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # DIV function
+    'match': '(?i)\\b(DIV)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # DPOKE command
+    'match': '(?i)\\b(DPOKE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DPEEK function
+    'match': '(?i)\\b(DPEEK)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
   { # DRAWTO command
     'match': '(?i)\\b(DRAWTO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DSOUND command
+    'match': '(?i)\\b(DSOUND)'
     'name': 'keyword.control.turbobasic'
   }
   { # END command
     'match': '(?i)\\b(END)$'
     'name': 'keyword.control.turbobasic'
+  }
+  { # ELSE command
+      'match': '(?i)\\b(ELSE)'
+      'name': 'keyword.control.turbobasic'
   }
   { # ENDIF command
       'match': '(?i)\\b(ENDIF)'
@@ -134,6 +175,10 @@
   }
   { # EXEC command
     'match': '(?i)\\b(EXEC)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # EXIT command
+    'match': '(?i)\\b(EXIT)'
     'name': 'keyword.control.turbobasic'
   }
   { # EXP function
@@ -156,6 +201,14 @@
     'match': '(?i)\\b(FRE)\\b'
     'name': 'entity.name.function.turbobasic'
   }
+  { # FRAC function
+    'match': '(?i)\\b(FRAC)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # GRAPHICS command
+    'match': '(?i)\\b(GRAPHICS)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # GET command
     'match': '(?i)\\b(GET)'
     'name': 'keyword.control.turbobasic'
@@ -168,9 +221,21 @@
     'match': '(?i)\\b(GO(\\s*)?TO)'
     'name': 'keyword.control.turbobasic'
   }
+  { # GO# command
+    'match': '(?i)\\b(GO#)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # HEX function
+    'match': '(?i)\\b(HEX\\$)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
   { # IF command
     'match': '(?i)\\b(IF)'
     'name': 'keyword.control.turbobasic'
+  }
+  { # INKEY$ system variables
+    'match': '\\b(INKEY\\$)'
+    'name': 'variable.language.turbobasic'
   }
   { # INPUT command
     'match': '(?i)\\b(INPUT)'
@@ -196,9 +261,25 @@
     'match': '(?i)\\b(LOAD)'
     'name': 'keyword.control.turbobasic'
   }
+  { # LOOP command
+    'match': '(?i)\\b(LOOP)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # LOG function
     'match': '(?i)\\b(LOG)\\b'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # MOD function
+    'match': '(?i)\\b(MOD)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # MOVE command
+    'match': '(?i)\\b(MOVE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # -MOVE command
+    'match': '(?i)\\b(\\-MOVE)'
+    'name': 'keyword.control.turbobasic'
   }
   { # NEW command
     'match': '(?i)\\b(NEW)'
@@ -223,6 +304,10 @@
   { # OR operator
     'match': '(?i)\\b(OR)'
     'name': 'keyword.operator.turbobasic'
+  }
+  { # PAINT command
+    'match': '(?i)\\b(PAINT)'
+    'name': 'keyword.control.turbobasic'
   }
   { # PEEK function
     'match': '(?i)\\b(PEEK)\\b'
@@ -252,13 +337,21 @@
     'match': '(?i)\\b(POINT)'
     'name': 'keyword.control.turbobasic'
   }
+  { # REPEAT command
+    'match': '(?i)\\b(REPEAT)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # READ command
     'match': '(?i)\\b(READ)'
     'name': 'keyword.control.turbobasic'
   }
-  { # REM command (comments)
+  { # REM command (comments): TODO: fix abreviations
     'match': '(?i)(REM.*(\\n|$))'
     'name': 'comment.line.turbobasic'
+  }
+  { #REM command as dot (comments)
+      'match': '(\\.\\s.*(\\n|$))'
+      'name': 'comment.line.turbobasic'
   }
   { # RESTORE command
     'match': '(?i)\\b(RESTORE)'
@@ -267,6 +360,10 @@
   { # RETURN command
     'match': '(?i)\\b(RETURN)'
     'name': 'keyword.control.turbobasic'
+  }
+  { # RAND function
+    'match': '(?i)\\b(RAND)\\b'
+    'name': 'entity.name.function.turbobasic'
   }
   { # RND function
     'match': '(?i)\\b(RND)\\b'
@@ -300,9 +397,17 @@
     'match': '(?i)\\b(STOP)'
     'name': 'keyword.control.turbobasic'
   }
+  { # SOUND command
+    'match': '(?i)\\b(SOUND)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # STR$ function
     'match': '(?i)\\b(STR(\\$|\\b))'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # TIME/TIME$ system variables
+    'match': '\\b(TIME(\\$|\\b))'
+    'name': 'variable.language.turbobasic'
   }
   { # TAN function
     'match': '(?i)\\b(TAN)\\b'
@@ -312,9 +417,17 @@
     'match': '(?i)\\b(THEN)'
     'name': 'keyword.control.turbobasic'
   }
+  { # TEXT command
+    'match': '(?i)\\b(TEXT)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # TRAP command
     'match': '(?i)\\b(TRAP)'
     'name': 'keyword.control.turbobasic'
+  }
+  { # TRUNC function
+    'match': '(?i)\\b(TRUNC)\\b'
+    'name': 'entity.name.function.turbobasic'
   }
   { # TO command
     'match': '(?i)\\b(TO)'
@@ -323,6 +436,10 @@
   { # USR function
     'match': '(?i)\\b(USR)\\b'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # UNTIL command
+    'match': '(?i)\\b(UNTIL)'
+    'name': 'keyword.control.turbobasic'
   }
   { # WEND command
     'match': '(?i)\\b(WEND)'
