@@ -1,24 +1,24 @@
 {
-  "name": "language-cbmbasic",
+  "name": "language-turbobasicxl",
   "version": "0.2.2",
   "description": "Commodore 64 BASIC 2.0 language support in Atom",
-  "author": "Steven J. Syrek <steven.syrek@gmail.com>",
+  "author": "Mariano Dominguez <mariano.dm@gmail.com>",
   "license": "ISC",
-  "homepage": "https://atom.io/packages/language-cbmbasic",
+  "homepage": "https://atom.io/packages/language-turbobasicxl",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sjsyrek/language-cbmbasic.git"
+    "url": "https://github.com/marianodominguez/language-turbobasicxl.git"
   },
   "bugs": {
-    "url": "https://github.com/sjsyrek/language-cbmbasic/issues"
+    "url": "https://github.com/marianodominguez/language-turbobasicxl/issues"
   },
   "keywords": [
     "Atom",
     "package",
     "language",
     "basic",
-    "c-64",
-    "commodore",
+    "atari",
+    "turbo basic",
     "syntax",
     "highlight"
   ],

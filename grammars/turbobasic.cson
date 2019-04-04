@@ -1,0 +1,323 @@
+'scopeName': 'source.turbobasic'
+'name': 'Turbo BASIC XL 1.5'
+'fileTypes': ['tba', 'tb']
+'patterns': [
+  { # lines that do not begin with a line number are marked invalid
+    'match': '^\\D+'
+    'name': 'invalid.illegal.turbobasic'
+  }
+  { # numeric constants, which may include scientific notation
+    'match': '(^\\d+)|(\\b(?i)(([0-9]+(\\.|\\s*E\\s*)?[0-9]*)|(\\.[0-9]+))\\b)'
+    'captures':
+      '1':
+        'name': 'markup.bold.turbobasic'
+      '2':
+        'name': 'constant.numeric.turbobasic'
+    'name': 'meta.constant.turbobasic'
+  }
+  { # strings
+    'match': '(")([^"]*(")|.*\\n|.*$)'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.string.begin.turbobasic'
+      '2':
+        'name': 'string.quoted.double.turbobasic'
+      '3':
+        'name': 'punctuation.definition.string.begin.turbobasic'
+    'name': 'meta.string.quoted.double.turbobasic'
+  }
+  { # operators
+    'match': ':|;|=|\\+|-|\\*|/|\\^|\\?|!|\\[|\\]|"|&|<|>|\\\\|@|_'
+    'name': 'keyword.operator.turbobasic'
+  }
+# { # functions
+#   'match': '\\b(?i)([A-Z]+\\$?)\\s*\\([^)]+\\)'
+#   'captures':
+#     '1':
+#       'name': 'entity.name.function.turbobasic'
+# }
+  { # functions without arguments are invalid
+    'match': '\\b(?i)([A-Z][a-z]+\\$?)\\s*\\(\\)'
+    'name': 'invalid.illegal.turbobasic'
+  }
+  { # ABS function
+    'match': '\\b(?i)(ABS)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # AND operator
+    'match': '\\b(?i)(AND)'
+    'name': 'keyword.operator.turbobasic'
+  }
+  { # ASC function
+    'match': '\\b(?i)(ASC)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # ADR function
+      'match': '\\b(?i)(ADR)\\b'
+      'name': 'entity.name.function.turbobasic'
+  }
+  { # ATN function
+    'match': '\\b(?i)(ATN)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # CHR$ function
+    'match': '\\b(?i)(CHR(\\$|\\b))'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # CLOAD command
+    'match': '\\b(?i)(CLOAD)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # CLOG function
+      'match': '\\b(?i)(CLOG)\\b'
+      'name': 'entity.name.function.turbobasic'
+  }
+  { # CLOSE command
+    'match': '\\b(?i)(CLOSE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # CLR command
+    'match': '\\b(?i)(CLR)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # CLS command
+    'match': '\\b(?i)(CLS)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # COLOR command
+    'match': '\\b(?i)(COLOR)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # COM command
+      'match': '\\b(?i)(COM)'
+      'name': 'keyword.control.turbobasic'
+  }
+  { # CONT command
+    'match': '\\b(?i)(CONT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # COS function
+    'match': '\\b(?i)(COS)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # DATA command
+    'match': '\\b(?i)(DATA)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DEG command
+    'match': '\\b(?i)(DEG)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DIM command
+    'match': '\\b(?i)(DIM)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DOS command
+    'match': '\\b(?i)(DOS)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # DRAWTO command
+    'match': '\\b(?i)(DRAWTO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # END command
+    'match': '\\b(?i)(END)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # ENDIF command
+      'match': '\\b(?i)(ENDIF)'
+      'name': 'keyword.control.turbobasic'
+  }
+  { # ENDPROC command
+      'match': '\\b(?i)(ENDPROC)'
+      'name': 'keyword.control.turbobasic'
+  }
+  { # EXEC command
+    'match': '\\b(?i)(EXEC)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # EXP function
+    'match': '\\b(?i)(EXP)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # FCOLOR command
+    'match': '\\b(?i)(FCOLOR)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # FILLTO command
+    'match': '\\b(?i)(FILLTO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # FOR command
+    'match': '\\b(?i)(FOR)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # FRE function
+    'match': '\\b(?i)(FRE)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # GET command
+    'match': '\\b(?i)(GET)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # GOSUB command
+    'match': '\\b(?i)(GOSUB)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # GOTO command
+    'match': '\\b(?i)(GO(\\s*)?TO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # IF command
+    'match': '\\b(?i)(IF)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # INPUT command
+    'match': '\\b(?i)(INPUT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # INT function
+    'match': '\\b(?i)(INT)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # LEN function
+    'match': '\\b(?i)(LEN)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # LET command
+    'match': '\\b(?i)(LET)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # LIST command
+    'match': '\\b(?i)(LIST)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # LOAD command
+    'match': '\\b(?i)(LOAD)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # LOG function
+    'match': '\\b(?i)(LOG)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # NEW command
+    'match': '\\b(?i)(NEW)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # NEXT command
+    'match': '\\b(?i)(NEXT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # NOT operator
+    'match': '\\b(?i)(NOT)'
+    'name': 'keyword.operator.turbobasic'
+  }
+  { # ON command
+    'match': '\\b(?i)(ON)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # OPEN command
+    'match': '\\b(?i)(OPEN)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # OR operator
+    'match': '\\b(?i)(OR)'
+    'name': 'keyword.operator.turbobasic'
+  }
+  { # PEEK function
+    'match': '\\b(?i)(PEEK)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # POKE command
+    'match': '\\b(?i)(POKE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # POS function
+    'match': '\\b(?i)(POS)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # PRINT command
+    'match': '\\b(?i)(PRINT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # PRINT command
+      'match': '\\b(?i)(\?)'
+      'name': 'keyword.control.turbobasic'
+  }
+  { # POINT command
+    'match': '\\b(?i)(POINT)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # READ command
+    'match': '\\b(?i)(READ)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # REM command (comments)
+    'match': '(REM.*(\\n|$))'
+    'name': 'comment.line.turbobasic'
+  }
+  { # RESTORE command
+    'match': '\\b(?i)(RESTORE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # RETURN command
+    'match': '\\b(?i)(RETURN)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # RND function
+    'match': '\\b(?i)(RND)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # RUN command
+    'match': '\\b(?i)(RUN)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # SAVE command
+    'match': '\\b(?i)(SAVE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # SGN function
+    'match': '\\b(?i)(SGN)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # SIN function
+    'match': '\\b(?i)(SIN)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # SQR function
+    'match': '\\b(?i)(SQR)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # STEP command
+    'match': '\\b(?i)(STEP)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # STOP command
+    'match': '\\b(?i)(STOP)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # STR$ function
+    'match': '\\b(?i)(STR(\\$|\\b))'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # TAN function
+    'match': '\\b(?i)(TAN)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # THEN command
+    'match': '\\b(?i)(THEN)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # TRAP command
+    'match': '\\b(?i)(TRAP)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # TO command
+    'match': '\\b(?i)(TO)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # USR function
+    'match': '\\b(?i)(USR)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+]
