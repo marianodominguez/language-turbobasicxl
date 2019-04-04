@@ -37,7 +37,7 @@
 #       'name': 'entity.name.function.turbobasic'
 # }
   { # Line label command
-    'match': '(?i)\\b(#)'
+    'match': '(?i)(#\\s.*(\\n|$))'
     'name': 'variable.language.turbobasic'
   }
   { # %PUT command
@@ -88,12 +88,16 @@
     'match': '(?i)\\b(BLOAD)'
     'name': 'keyword.control.turbobasic'
   }
+  { # BYE command
+    'match': '(?i)\\b(BYE)|(BY\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # CHR$ function
-    'match': '(?i)\\b(CHR(\\$|\\b))'
+    'match': '(?i)\\b(CHR\\$)'
     'name': 'entity.name.function.turbobasic'
   }
   { # CLOAD command
-    'match': '(?i)\\b(CLOAD)'
+    'match': '(?i)\\b(CLOAD)|(CLOA\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # CIRCLE command
@@ -105,7 +109,7 @@
       'name': 'entity.name.function.turbobasic'
   }
   { # CLOSE command
-    'match': '(?i)\\b(CLOSE)'
+    'match': '(?i)\\b(CLOSE)|(CL\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # CLR command
@@ -117,7 +121,7 @@
     'name': 'keyword.control.turbobasic'
   }
   { # COLOR command
-    'match': '(?i)\\b(COLOR)'
+    'match': '(?i)\\b(COLOR)|(C\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # COM command
@@ -125,27 +129,31 @@
       'name': 'keyword.control.turbobasic'
   }
   { # CONT command
-    'match': '(?i)\\b(CONT)'
+    'match': '(?i)\\b(CONT)|(CON\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # COS function
     'match': '(?i)\\b(COS)\\b'
     'name': 'entity.name.function.turbobasic'
   }
+  { # CSAVE command
+    'match': '(?i)\\b(CSAVE)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # DATA command
-    'match': '(?i)\\b(DATA)'
+    'match': '(?i)\\b(DATA)(D\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # DEG command
-    'match': '(?i)\\b(DEG)'
+    'match': '(?i)\\b(DEG)|(DE\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # DIM command
-    'match': '(?i)\\b(DIM)'
+    'match': '(?i)\\b(DIM)|(DI\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # DOS command
-    'match': '(?i)\\b(DOS)'
+    'match': '(?i)\\b(DOS)|(DO\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # DO command
@@ -169,7 +177,7 @@
     'name': 'entity.name.function.turbobasic'
   }
   { # DRAWTO command
-    'match': '(?i)\\b(DRAWTO)'
+    'match': '(?i)\\b(DRAWTO)|(DR\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # DSOUND command
@@ -179,6 +187,10 @@
   { # END command
     'match': '(?i)\\b(END)$'
     'name': 'keyword.control.turbobasic'
+  }
+  { # ENTER command
+      'match': '(?i)\\b(ENTER)|(E\\.)'
+      'name': 'keyword.control.turbobasic'
   }
   { # ELSE command
       'match': '(?i)\\b(ELSE)'
@@ -213,7 +225,7 @@
     'name': 'keyword.control.turbobasic'
   }
   { # FOR command
-    'match': '(?i)\\b(FOR)'
+    'match': '(?i)\\b(FOR)|(F\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # FRE function
@@ -224,20 +236,20 @@
     'match': '(?i)\\b(FRAC)\\b'
     'name': 'entity.name.function.turbobasic'
   }
-  { # GRAPHICS command
-    'match': '(?i)\\b(GRAPHICS)'
-    'name': 'keyword.control.turbobasic'
-  }
   { # GET command
-    'match': '(?i)\\b(GET)'
+    'match': '(?i)\\b(GET)|(GE\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # GOSUB command
-    'match': '(?i)\\b(GOSUB)'
+    'match': '(?i)\\b(GOSUB)|(GOS\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # GOTO command
-    'match': '(?i)\\b(GO(\\s*)?TO)'
+    'match': '(?i)\\b(GO(\\s*)?TO)|(G\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # GRAPHICS command
+    'match': '(?i)\\b(GRAPHICS)|(GR\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # GO# command
@@ -253,11 +265,11 @@
     'name': 'keyword.control.turbobasic'
   }
   { # INKEY$ system variables
-    'match': '\\b(INKEY\\$)'
+    'match': '(?i)\\b(INKEY\\$)'
     'name': 'variable.language.turbobasic'
   }
   { # INPUT command
-    'match': '(?i)\\b(INPUT)'
+    'match': '(?i)\\b(INPUT)|(IN\\.)|(I\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # INSTR command
@@ -273,19 +285,27 @@
     'name': 'entity.name.function.turbobasic'
   }
   { # LET command
-    'match': '(?i)\\b(LET)'
+    'match': '(?i)\\b(LET)|(LE\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # LIST command
-    'match': '(?i)\\b(LIST)'
+    'match': '(?i)\\b(LIST)|(L\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # LOAD command
-    'match': '(?i)\\b(LOAD)'
+    'match': '(?i)\\b(LOAD)|(LO\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # LOCATE command
+    'match': '(?i)\\b(LOCATE)|(LOC\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # LOOP command
     'match': '(?i)\\b(LOOP)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # LPRINT command
+    'match': '(?i)\\b(LPRINT)|(LP\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # LOG function
@@ -309,19 +329,23 @@
     'name': 'keyword.control.turbobasic'
   }
   { # NEXT command
-    'match': '(?i)\\b(NEXT)'
+    'match': '(?i)\\b(NEXT)|(N\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # NOT operator
     'match': '(?i)\\b(NOT)'
     'name': 'keyword.operator.turbobasic'
   }
+  { # NOTE command
+    'match': '(?i)\\b(NOTE)|(NO\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # ON command
     'match': '(?i)\\b(ON)'
     'name': 'keyword.control.turbobasic'
   }
   { # OPEN command
-    'match': '(?i)\\b(OPEN)'
+    'match': '(?i)\\b(OPEN)||(O\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # OR operator
@@ -332,20 +356,40 @@
     'match': '(?i)\\b(PAINT)'
     'name': 'keyword.control.turbobasic'
   }
+  { # PADDLE function
+    'match': '(?i)\\b(PADDLE)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
   { # PEEK function
     'match': '(?i)\\b(PEEK)\\b'
     'name': 'entity.name.function.turbobasic'
   }
-  { # POKE command
-    'match': '(?i)\\b(POKE)'
+  { # PLOT command
+    'match': '(?i)\\b(PLOT)|(PL\\.)'
     'name': 'keyword.control.turbobasic'
+  }
+  { # POKE command
+    'match': '(?i)\\b(POKE)|(POK\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # POP command
+      'match': '(?i)\\b(POP)'
+      'name': 'keyword.control.turbobasic'
   }
   { # POS function
     'match': '(?i)\\b(POS)\\b'
     'name': 'entity.name.function.turbobasic'
   }
+  { # POINT command
+    'match': '(?i)\\b(POINT)|(PO\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # POSITION command
+    'match': '(?i)\\b(POSITION)|(POS\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # PRINT command
-    'match': '(?i)\\b(PRINT)'
+    'match': '(?i)\\b(PRINT)|(PR\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # PRINT with ? command
@@ -356,12 +400,16 @@
       'match': '(?i)\\b(PROC)'
       'name': 'keyword.control.turbobasic'
   }
-  { # POINT command
-    'match': '(?i)\\b(POINT)'
-    'name': 'keyword.control.turbobasic'
+  { # PTRIG function
+    'match': '(?i)\\b(PTRIG)\\b'
+    'name': 'entity.name.function.turbobasic'
   }
   { # PUT command
-    'match': '(?i)\\b(PUT)'
+    'match': '(?i)\\b(PUT)|(PU\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # RAD command
+    'match': '(?i)\\b(RAD)'
     'name': 'keyword.control.turbobasic'
   }
   { # REPEAT command
@@ -369,7 +417,7 @@
     'name': 'keyword.control.turbobasic'
   }
   { # READ command
-    'match': '(?i)\\b(READ)'
+    'match': '(?i)\\b(READ)|(REA\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # REM command (comments): TODO: fix abreviations
@@ -381,11 +429,11 @@
       'name': 'comment.line.turbobasic'
   }
   { # RESTORE command
-    'match': '(?i)\\b(RESTORE)'
+    'match': '(?i)\\b(RESTORE)|(RES\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # RETURN command
-    'match': '(?i)\\b(RETURN)'
+    'match': '(?i)\\b(RETURN)|(RET\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # RAND function
@@ -397,11 +445,15 @@
     'name': 'entity.name.function.turbobasic'
   }
   { # RUN command
-    'match': '(?i)\\b(RUN)'
+    'match': '(?i)\\b(RUN)|(RU\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # SAVE command
-    'match': '(?i)\\b(SAVE)'
+    'match': '(?i)\\b(SAVE)|(S\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # SETCOLOR command
+    'match': '(?i)\\b(SETCOLOR)|(SE\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # SGN function
@@ -412,21 +464,33 @@
     'match': '(?i)\\b(SIN)\\b'
     'name': 'entity.name.function.turbobasic'
   }
+  { # SOUND command
+    'match': '(?i)\\b(SOUND)|(SO\\.)'
+    'name': 'keyword.control.turbobasic'
+  }
   { # SQR function
     'match': '(?i)\\b(SQR)\\b'
     'name': 'entity.name.function.turbobasic'
+  }
+  { # STATUS command
+    'match': '(?i)\\b(STATUS)|(ST\\.)'
+    'name': 'keyword.control.turbobasic'
   }
   { # STEP command
     'match': '(?i)\\b(STEP)'
     'name': 'keyword.control.turbobasic'
   }
   { # STOP command
-    'match': '(?i)\\b(STOP)'
+    'match': '(?i)\\b(STOP)|(STO\\.)'
     'name': 'keyword.control.turbobasic'
   }
-  { # SOUND command
-    'match': '(?i)\\b(SOUND)'
-    'name': 'keyword.control.turbobasic'
+  { # STICK function
+    'match': '(?i)\\b(STICK)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
+  { # STRIG function
+    'match': '(?i)\\b(STRIG)\\b'
+    'name': 'entity.name.function.turbobasic'
   }
   { # STR$ function
     'match': '(?i)\\b(STR(\\$|\\b))'
@@ -449,7 +513,7 @@
     'name': 'keyword.control.turbobasic'
   }
   { # TRAP command
-    'match': '(?i)\\b(TRAP)'
+    'match': '(?i)\\b(TRAP)|(T\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # TRUNC function
@@ -472,12 +536,20 @@
     'match': '(?i)\\b(UNTIL)'
     'name': 'keyword.control.turbobasic'
   }
+  { # VAL function
+    'match': '(?i)\\b(VAL)\\b'
+    'name': 'entity.name.function.turbobasic'
+  }
   { # WEND command
     'match': '(?i)\\b(WEND)'
     'name': 'keyword.control.turbobasic'
   }
   { # WHILE command
     'match': '(?i)\\b(WHILE)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # XIO command
+    'match': '(?i)\\b(XIO)|(X\\.)'
     'name': 'keyword.control.turbobasic'
   }
 ]
