@@ -37,7 +37,7 @@
 #       'name': 'entity.name.function.turbobasic'
 # }
   { # Line label command
-    'match': '(?i)\\b(#)'
+    'match': '(?i)(#\\s.*(\\n|$))'
     'name': 'variable.language.turbobasic'
   }
   { # %PUT command
@@ -85,7 +85,11 @@
     'name': 'keyword.control.turbobasic'
   }
   { # BRUN command
-    'match': '(?i)\\b(BLOAD)'
+    'match': '(?i)\\b(BRUN)'
+    'name': 'keyword.control.turbobasic'
+  }
+  { # BYE command
+    'match': '(?i)\\b(BYE)|(BY\\.)'
     'name': 'keyword.control.turbobasic'
   }
   { # CHR$ function
