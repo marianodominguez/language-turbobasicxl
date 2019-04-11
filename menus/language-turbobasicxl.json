@@ -1,0 +1,34 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Convert to ASCII",
+        "command": "language-turbobasicxl:to-ascii"
+      },
+      {
+        "label": "Convert to ATASCII",
+        "command": "language-turbobasicxl:to-atascii"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Turbo Basic XL",
+          "submenu": [
+            {
+              "label": "toAscii",
+              "command": "language-turbobasicxl:to-ascii"
+            },
+            {
+              "label": "toAtascii",
+              "command": "language-turbobasicxl:to-atascii"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

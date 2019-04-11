@@ -1,0 +1,6 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-a": "language-turbobasicxl:to-ascii",
+    "ctrl-alt-t": "language-turbobasicxl:to-atascii"
+  }
+}

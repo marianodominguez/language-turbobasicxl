@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "description": "Atari TurboBasic XL 1.5 language support in Atom",
   "author": "Mariano Dominguez <mariano.dm@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://atom.io/packages/language-turbobasicxl",
   "repository": {
     "type": "git",
@@ -23,6 +23,9 @@
     "syntax",
     "highlight"
   ],
+  "activationCommands": {
+  "atom-workspace": "language-turbobasicxl:to-ascii"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
